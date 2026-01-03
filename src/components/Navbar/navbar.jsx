@@ -115,10 +115,10 @@ const Navbar = () => {
         <div className="mobile-menu">
           {/* LINKS */}
           <div className="mobile-links">
-            <span onClick={() => navigate("/")}>Pricing</span>
-            <span onClick={() => navigate("/")}>Problems</span>
-            <span onClick={() => navigate("/")}>Rewards</span>
-            <span onClick={() => navigate("/")}>Contact</span>
+             <span onClick={() => scrollTo("pricing")}>Pricing</span>
+          <span onClick={() => scrollTo("problems")}>Problems</span>
+          <span onClick={() => scrollTo("rewards")}>Rewards</span>
+          <span onClick={() => scrollTo("contact")}>Contact</span>
           </div>
 
           {/* PAYMENT STATUS */}
