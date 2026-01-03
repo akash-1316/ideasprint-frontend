@@ -1,0 +1,151 @@
+.footer {
+  padding: 80px 40px 30px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 23, 42, 0.9),
+      rgba(2, 6, 23, 1) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  border-top: 1px solid rgba(255, 107, 53, 0.15);
+}
+/* =====================
+   🔥 RAIC SOCIAL ICONS
+===================== */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 1.35rem;
+
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--accent-red),
+    var(--accent-orange)
+  );
+
+  box-shadow: 0 0 12px rgba(255, 122, 24, 0.35);
+  transition: all 0.35s ease;
+}
+
+/* ✨ Hover Effect */
+.footer-socials a:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow:
+    0 0 18px rgba(255, 122, 24, 0.7),
+    0 0 32px rgba(230, 57, 70, 0.4);
+}
+
+/* Optional: subtle click feedback */
+.footer-socials a:active {
+  transform: scale(0.95);
+}
+
+.footer-socials a[aria-label="Instagram"]:hover {
+  box-shadow: 0 0 20px #e1306c;
+}
+
+.footer-socials a[aria-label="LinkedIn"]:hover {
+  box-shadow: 0 0 20px #0a66c2;
+}
+
+.footer-socials a[aria-label="WhatsApp"]:hover {
+  box-shadow: 0 0 20px #25d366;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+/* BRAND */
+.footer-brand {
+  width: 30%;
+}
+
+.footer-brand h3 {
+  color: #ff6b35;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+/* COLUMNS */
+.footer-col {
+  width: 20%;
+}
+
+.footer-col h4 {
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer-col li:hover {
+  color: #ff6b35;
+}
+
+.footer-sub {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #ff6b35;
+}
+
+/* CONTACT */
+.contact-list li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 107, 53, 0.15);
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-brand,
+  .footer-col {
+    width: 100%;
+  }
+}

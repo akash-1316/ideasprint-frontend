@@ -1,0 +1,105 @@
+.event-container {
+  width: 520px;
+  padding: 30px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.event-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.event-container input,
+.event-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+}
+
+/* TEAM SIZE */
+.team-size-section {
+  margin-bottom: 18px;
+}
+
+.team-size-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.team-size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.team-size-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.team-size-btn:hover {
+  border-color: var(--accent-red);
+}
+
+.team-size-btn.active {
+  background: linear-gradient(
+    90deg,
+    var(--accent-red),
+    var(--accent-orange)
+  );
+  border: none;
+}
+
+/* BUTTON */
+.event-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-red),
+    var(--accent-orange)
+  );
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+select {
+  color: #e5e7eb;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid #1e293b;
+}
+
+/* 🔥 THIS IS THE KEY FIX */
+select option {
+  color: #020617;          /* dark text */
+  background: #ffffff;    /* white background */
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .event-container {
+    width: calc(100% - 30px);
+    padding: 24px;
+  }
+
+  .team-size-options {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,47 @@
+:root {
+  --bg-dark: #020617;
+  --card-dark: #020617;
+  --accent-red: #e63946;
+  --accent-orange: #ff6b35;
+  --text-light: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1e293b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #000);
+  color: var(--text-light);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Toastify__toast {
+  border-radius: 12px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.Toastify__toast--success {
+  border-left: 5px solid #22c55e;
+}
+
+.Toastify__toast--error {
+  border-left: 5px solid #ef4444;
+}
+
+.Toastify__toast--warning {
+  border-left: 5px solid #facc15;
+}
+
+.Toastify__toast--info {
+  border-left: 5px solid #38bdf8;
+}

@@ -1,0 +1,84 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  /* SAME BACKGROUND AS LOGIN */
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 23, 42, 0.9),
+      rgba(2, 6, 23, 1) 45%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(2, 6, 23, 0.9),
+      rgba(0, 0, 0, 1) 70%
+    );
+}
+
+
+.home h1 {
+  font-size: 3rem;
+}
+
+.home h1 span {
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin: 15px 0;
+  color: var(--muted);
+}
+
+.cta {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.date-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #1e293b;
+  backdrop-filter: blur(10px);
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+}
+
+.date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  line-height: 1.1;
+}
+
+.mode {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  line-height: 1.1;
+}
+

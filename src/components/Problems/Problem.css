@@ -1,0 +1,114 @@
+.domains-section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.domains-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.domains-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: white;
+}
+
+.domains-title span {
+  background: linear-gradient(90deg, #ff4d4d, #ff8c42);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.domains-sub {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.domains-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* =====================
+   DOMAIN CARD
+===================== */
+.domain-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(2, 6, 23, 0.95)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  backdrop-filter: blur(14px);
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+.domain-card h4 {
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.domain-card p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.domain-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 28px rgba(255, 120, 80, 0.25);
+}
+
+/* =====================
+   ICON
+===================== */
+.domain-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   COLOR THEMES
+===================== */
+.purple .domain-icon { background: rgba(168, 85, 247, 0.2); color: #a855f7; }
+.green .domain-icon { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+.red .domain-icon { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.blue .domain-icon { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+.cyan .domain-icon { background: rgba(34, 211, 238, 0.2); color: #22d3ee; }
+.yellow .domain-icon { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+.orange .domain-icon { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+.lime .domain-icon { background: rgba(132, 204, 22, 0.2); color: #84cc16; }
+.indigo .domain-icon { background: rgba(99, 102, 241, 0.2); color: #6366f1; }
+.pink .domain-icon { background: rgba(236, 72, 153, 0.2); color: #ec4899; }
+.violet .domain-icon { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+.gold .domain-icon { background: rgba(250, 204, 21, 0.2); color: #facc15; }
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 768px) {
+  .domains-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,80 @@
+/* FULL PAGE BACKGROUND (SAME AS LOGIN / REGISTER) */
+.success-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 23, 42, 0.9),
+      rgba(2, 6, 23, 1) 45%,
+      rgba(0, 0, 0, 1) 100%
+    );
+}
+
+/* CARD */
+.success-card {
+  width: 420px;
+  padding: 40px 30px;
+  background: rgba(2, 6, 23, 0.92);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+/* ICON */
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.success-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* SUCCESS STATE */
+.success-card.success h2 {
+  color: #ff6b35;
+}
+
+/* PENDING STATE */
+.success-card.pending h2 {
+  color: #fbbf24;
+}
+
+/* SUBTEXT */
+.success-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ACTION BUTTON */
+.success-btn {
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #ff6b35,
+    #ff8c42
+  );
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .success-card {
+    width: calc(100% - 30px);
+  }
+}

@@ -1,0 +1,67 @@
+/* FULL PAGE BACKGROUND */
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* SINGLE UNIFORM BACKGROUND */
+  background: radial-gradient(
+    circle at top,
+    #020617 0%,
+    #020617 60%,
+    #000000 100%
+  );
+}
+
+/* LOGIN CARD */
+.auth-container {
+  width: 380px;
+  padding: 30px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* INPUTS */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+}
+
+/* BUTTON */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-red),
+    var(--accent-orange)
+  );
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* TEXT */
+.auth-container p {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.auth-container span {
+  color: var(--accent-red);
+  cursor: pointer;
+}

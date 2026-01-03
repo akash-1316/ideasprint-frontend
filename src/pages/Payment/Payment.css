@@ -1,0 +1,172 @@
+.payment-container {
+  width: 700px;
+  padding: 30px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.65);
+}
+
+/* HEADER */
+.payment-title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.payment-step {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* AMOUNT */
+.amount-box {
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 0.7),
+    rgba(15, 23, 42, 0.7)
+  );
+  border: 1px solid var(--border);
+  margin-bottom: 25px;
+}
+
+.amount-box h1 {
+  font-size: 2rem;
+}
+
+.amount-box p {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* CONTENT */
+.payment-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* QR BOX */
+.qr-box {
+  width: 45%;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(2, 6, 23, 0.8);
+  text-align: center;
+}
+
+.qr-box img {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.upi-text {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.upi-id {
+  font-weight: 600;
+}
+
+/* FORM */
+.payment-form {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.payment-form input {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+}
+
+.upload-box {
+  padding: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  border-color: var(--accent-red);
+}
+
+.payment-form button {
+  margin-top: 10px;
+  padding: 14px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-red),
+    var(--accent-orange)
+  );
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Upload Box */
+.upload-box {
+  width: 100%;
+  padding: 16px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.upload-box:hover {
+  border-color: #ff7a18;
+  background: rgba(255, 122, 24, 0.08);
+}
+
+/* Inner content */
+.upload-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
+
+/* Upload icon */
+.upload-icon {
+  color: #ff7a18;
+  flex-shrink: 0;
+}
+
+/* When file selected */
+.upload-box span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .payment-container {
+    width: calc(100% - 30px);
+  }
+
+  .payment-content {
+    flex-direction: column;
+  }
+
+  .qr-box,
+  .payment-form {
+    width: 100%;
+  }
+}

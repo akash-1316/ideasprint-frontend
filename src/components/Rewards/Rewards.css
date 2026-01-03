@@ -1,0 +1,171 @@
+.rewards-section {
+  padding: 120px 40px;
+  position: relative;
+
+  /* ✅ SAME BACKGROUND AS LOGIN / REGISTER */
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 23, 42, 0.9),
+      rgba(2, 6, 23, 1) 45%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 107, 53, 0.12),
+      transparent 65%
+    );
+
+  border-top: 1px solid rgba(255, 107, 53, 0.18);
+  border-bottom: 1px solid rgba(255, 107, 53, 0.18);
+}
+/* LAYOUT */
+.rewards-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.rewards-left {
+  width: 55%;
+}
+
+.rewards-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  background: rgba(255, 107, 53, 0.15);
+  color: #ff6b35;
+  margin-bottom: 16px;
+}
+
+.rewards-left h2 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.rewards-left h2 span {
+  color: #ff6b35;
+}
+
+.rewards-desc {
+  color: #94a3b8;
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+
+/* LIST */
+.rewards-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rewards-list li {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  background: rgba(255, 107, 53, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  color: #ff6b35;
+}
+
+.rewards-list h4 {
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.rewards-list p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* RIGHT */
+.rewards-right {
+  width: 45%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background: rgba(2, 6, 23, 0.95);
+  border: 1px solid rgba(255, 107, 53, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.rank-card h1 {
+  font-size: 3rem;
+  color: #ff6b35;
+}
+
+.rank-card p {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #94a3b8;
+}
+
+/* ORBITS */
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 107, 53, 0.35);
+}
+
+.orbit-1 {
+  width: 260px;
+  height: 260px;
+}
+
+.orbit-2 {
+  width: 340px;
+  height: 340px;
+}
+
+/* FLOAT ICONS */
+.float-icon {
+  position: absolute;
+  font-size: 1.3rem;
+}
+
+.rocket {
+  top: 18%;
+  right: 12%;
+}
+
+.laptop {
+  bottom: 20%;
+  left: 12%;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .rewards-container {
+    flex-direction: column;
+  }
+
+  .rewards-left,
+  .rewards-right {
+    width: 100%;
+  }
+
+  .rewards-left h2 {
+    font-size: 2.2rem;
+  }
+}

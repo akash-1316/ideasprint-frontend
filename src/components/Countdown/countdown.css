@@ -1,0 +1,48 @@
+.countdown-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* BOX */
+.count-box {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 0.8),
+    rgba(15, 23, 42, 0.8)
+  );
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-box h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.count-box p {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .countdown-row {
+    gap: 10px;
+  }
+
+  .count-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .count-box h1 {
+    font-size: 1.4rem;
+  }
+}
