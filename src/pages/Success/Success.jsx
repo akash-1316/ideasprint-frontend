@@ -2,41 +2,67 @@ import React, { useEffect, useState } from "react";
 import "./Success.css";
 import API from "../../api/axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Success = () => {
-  const [success, setSuccess] = useState(false);
+  const [status, setStatus] = useState("loading"); 
+  // loading | pending | verified
   const navigate = useNavigate();
 
   useEffect(() => {
-    API.get("/success/status").then((res) => {
-      setSuccess(res.data.success);
+    const checkStatus = async () => {
+      try {
+        const res = await API.get("/success/status");
 
-      // ✅ Redirect to home after success (3 seconds)
-      if (res.data.success) {
+        if (!res.data.success) {
+          setStatus("pending");
+          return;
+        }
+
+        // ✅ VERIFIED
+        setStatus("verified");
+
         setTimeout(() => {
           navigate("/", { replace: true });
         }, 3000);
+      } catch (err) {
+        // ❌ token invalid / API error
+        toast.error("Session expired. Redirecting to home.");
+        navigate("/", { replace: true });
       }
-    });
+    };
+
+    checkStatus();
   }, [navigate]);
+
+  if (status === "loading") {
+    return (
+      <div className="success-page">
+        <div className="success-card pending">
+          <div className="success-icon">⏳</div>
+          <h2>Checking payment status...</h2>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="success-page">
-      <div className={`success-card ${success ? "success" : "pending"}`}>
+      <div className={`success-card ${status}`}>
         <div className="success-icon">
-          {success ? "🎉" : "⏳"}
+          {status === "verified" ? "🎉" : "⏳"}
         </div>
 
         <h2>
-          {success
+          {status === "verified"
             ? "Registration Confirmed!"
             : "Payment Under Verification"}
         </h2>
 
         <p>
-          {success
-            ? "Your payment has been verified successfully. Redirecting to home..."
-            : "Your payment is under manual verification. Please wait for confirmation."}
+          {status === "verified"
+            ? "Your payment has been verified. Redirecting to home..."
+            : "Your payment is under manual verification. Please wait."}
         </p>
       </div>
     </div>
