@@ -45,10 +45,19 @@ const Home = () => {
 
         <Countdown />
 
-        <button className="cta" onClick={handleRegisterClick}>
-          Register for Online Event →
-        </button>
-      </div>
+       <button className="cta" onClick={handleRegisterClick}>
+  Register for Online Event →
+</button>
+
+<div className="offer-pills">
+  <div className="offer-pill early">
+    🟢 Early Bird Offer Live
+  </div>
+
+  <div className="offer-pill slots">
+    🔥 Few Slots Left
+  </div>
+</div>
 
       <section id="pricing">
         <Pricing />
