@@ -7,6 +7,7 @@ import Pricing from "../../components/Pricing/Pricing";
 import Rewards from "../../components/Rewards/Rewards";
 import Footer from "../../components/Footer/footer";
 import ProblemDomains from "../../components/Problems/Problems";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -25,6 +26,7 @@ const Home = () => {
     <div>
       <Navbar />
 
+      {/* HERO SECTION */}
       <div className="home">
         <div className="date-pill">
           <span className="dot"></span>
@@ -45,30 +47,38 @@ const Home = () => {
 
         <Countdown />
 
-       <button className="cta" onClick={handleRegisterClick}>
-  Register for Online Event →
-</button>
+        <button className="cta" onClick={handleRegisterClick}>
+          Register for Online Event →
+        </button>
 
-<div className="offer-pills">
-  <div className="offer-pill early">
-    🟢 Early Bird Offer Live
-  </div>
+        {/* 🔥 OFFER PILLS */}
+        <div className="offer-pills">
+          <div className="offer-pill early">
+            🟢 Early Bird Offer Live
+          </div>
 
-  <div className="offer-pill slots">
-    🔥 Few Slots Left
-  </div>
-</div>
+          <div className="offer-pill slots">
+            🔥 Few Slots Left
+          </div>
+        </div>
+      </div>
 
+      {/* PRICING */}
       <section id="pricing">
         <Pricing />
       </section>
-       <section id="problems">
+
+      {/* PROBLEM DOMAINS */}
+      <section id="problems">
         <ProblemDomains />
       </section>
+
+      {/* REWARDS */}
       <section id="rewards">
         <Rewards />
       </section>
 
+      {/* FOOTER */}
       <section id="contact">
         <Footer />
       </section>
