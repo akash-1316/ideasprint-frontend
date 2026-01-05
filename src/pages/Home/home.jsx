@@ -48,7 +48,7 @@ const Home = () => {
         <Countdown />
 
         <button className="cta" onClick={handleRegisterClick}>
-          Register for Online Event →
+          Register for the Event →
         </button>
 
         {/* 🔥 OFFER PILLS */}
