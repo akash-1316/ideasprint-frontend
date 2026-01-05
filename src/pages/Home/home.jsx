@@ -31,7 +31,7 @@ const Home = () => {
         <div className="date-pill">
           <span className="dot"></span>
           <div>
-            <p className="date">Jan 20th, 2026</p>
+            <p className="date">Jan 24th, 2026</p>
             <p className="mode">Offline Event</p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Home = () => {
 
         <p className="subtitle">
           IdeaSprint · RAIC × IIT Tirupati
-          <br /> Hackathon · 20 Jan
+          <br /> Hackathon · 24 Jan
         </p>
 
         <Countdown />
