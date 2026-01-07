@@ -91,7 +91,7 @@ const Register = () => {
         />
 
         <input
-          placeholder="College Name"
+          placeholder="College Name-(REC)"
           value={college}
           onChange={(e) => setCollege(e.target.value)}
         />
