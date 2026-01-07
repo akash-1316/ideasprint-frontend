@@ -8,23 +8,23 @@ import { toast } from "react-toastify";
 const Payment = () => {
   const navigate = useNavigate();
 
-  // 🔥 EARLY BIRD FINAL PRICES (15% OFF)
-  const EARLY_BIRD_PRICE_MAP = {
-    1: 170,
-    2: 255,
-    3: 340,
+  // ✅ NORMAL PRICING
+  const PRICE_MAP = {
+    1: 200,
+    2: 300,
+    3: 400,
   };
 
   const [utr, setUtr] = useState("");
   const [file, setFile] = useState(null);
   const [teamSize, setTeamSize] = useState(1);
-  const [amount, setAmount] = useState(170);
+  const [amount, setAmount] = useState(200);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     const storedSize = Number(localStorage.getItem("teamSize")) || 1;
     setTeamSize(storedSize);
-    setAmount(EARLY_BIRD_PRICE_MAP[storedSize]);
+    setAmount(PRICE_MAP[storedSize]);
   }, []);
 
   const submitPayment = async () => {
@@ -35,7 +35,7 @@ const Payment = () => {
 
     const formData = new FormData();
     formData.append("utr", utr);
-    formData.append("amount", amount); // ✅ EARLY BIRD AMOUNT
+    formData.append("amount", amount);
     formData.append("screenshot", file);
 
     try {
@@ -59,24 +59,18 @@ const Payment = () => {
       <div className="payment-container">
         <h2 className="payment-title">Payment Verification</h2>
 
-        {/* 💥 AMOUNT */}
         <div className="amount-box">
           <h1>₹{amount}</h1>
           <p>{teamSize} member(s) · Online Event</p>
-          <span style={{ color: "#22c55e", fontWeight: "600" }}>
-            🎉 Early Bird Offer Applied (15% OFF)
-          </span>
         </div>
 
         <div className="payment-content">
-          {/* QR */}
           <div className="qr-box">
             <img src={upiImage} alt="UPI QR" />
             <p className="upi-text">UPI ID</p>
             <p className="upi-id">7569417341-2@axl</p>
           </div>
 
-          {/* FORM */}
           <div className="payment-form">
             <input
               type="text"
