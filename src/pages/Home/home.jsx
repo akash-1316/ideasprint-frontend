@@ -52,16 +52,6 @@ const Home = () => {
         </button>
 
         {/* 🔥 OFFER PILLS */}
-        <div className="offer-pills">
-          <div className="offer-pill early">
-            🟢 Early Bird Offer Live
-          </div>
-
-          <div className="offer-pill slots">
-            🔥 Few Slots Left
-          </div>
-        </div>
-      </div>
 
       {/* PRICING */}
       <section id="pricing">
