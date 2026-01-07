@@ -51,7 +51,27 @@ const Home = () => {
           Register for the Event →
         </button>
 
-        {/* 🔥 OFFER PILLS */}
+        {/* ✅ UPDATED INFO PILLS */}
+        <div
+          style={{
+            marginTop: "20px",
+            display: "flex",
+            gap: "12px",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <span className="date-pill">
+            <span className="dot"></span>
+            <span className="date">Registration Open</span>
+          </span>
+
+          <span className="date-pill">
+            <span className="dot"></span>
+            <span className="date">Exciting Prizes</span>
+          </span>
+        </div>
+      </div>
 
       {/* PRICING */}
       <section id="pricing">
