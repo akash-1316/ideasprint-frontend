@@ -11,7 +11,7 @@
           <h2>
             Win Big.
             <br />
-            <span>₹60,000 Prize Pool</span>
+            <span>₹50,000 Prize Pool</span>
           </h2>
 
           <p className="rewards-desc">
