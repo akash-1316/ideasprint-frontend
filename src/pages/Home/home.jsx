@@ -28,6 +28,7 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <div className="home">
+        {/* DATE PILL */}
         <div className="date-pill">
           <span className="dot"></span>
           <div>
@@ -51,24 +52,14 @@ const Home = () => {
           Register for the Event →
         </button>
 
-        {/* ✅ UPDATED INFO PILLS */}
-        <div
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            gap: "12px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          <span className="date-pill">
-            <span className="dot"></span>
-            <span className="date">Registration Open</span>
+        {/* 🔥 UPDATED OFFER PILLS */}
+        <div className="offer-pills">
+          <span className="offer-pill open">
+            🔥 Registration Open
           </span>
 
-          <span className="date-pill">
-            <span className="dot"></span>
-            <span className="date">Exciting Prizes</span>
+          <span className="offer-pill prizes">
+            🏆 Exciting Prizes
           </span>
         </div>
       </div>
@@ -78,7 +69,7 @@ const Home = () => {
         <Pricing />
       </section>
 
-      {/* PROBLEM DOMAINS */}
+      {/* PROBLEMS */}
       <section id="problems">
         <ProblemDomains />
       </section>
