@@ -28,8 +28,8 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <div className="home">
-        {/* 🗓️ DATE PILL */}
-        <div className="date-pill date-green">
+        {/* 🔥 DATE PILL (same style as Registration Open) */}
+        <div className="date-pill offer-pill open">
           <span className="calendar-icon">🗓️</span>
           <div>
             <p className="date">Jan 24th, 2026</p>
