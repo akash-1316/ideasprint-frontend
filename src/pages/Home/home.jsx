@@ -28,9 +28,9 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <div className="home">
-        {/* DATE PILL */}
-        <div className="date-pill">
-          <span className="dot"></span>
+        {/* 🗓️ DATE PILL */}
+        <div className="date-pill date-green">
+          <span className="calendar-icon">🗓️</span>
           <div>
             <p className="date">Jan 24th, 2026</p>
             <p className="mode">Offline Event</p>
@@ -52,15 +52,10 @@ const Home = () => {
           Register for the Event →
         </button>
 
-        {/* 🔥 UPDATED OFFER PILLS */}
+        {/* 🔥 INFO PILLS */}
         <div className="offer-pills">
-          <span className="offer-pill open">
-            🔥 Registration Open
-          </span>
-
-          <span className="offer-pill prizes">
-            🏆 Exciting Prizes
-          </span>
+          <span className="offer-pill open">🔥 Registration Open</span>
+          <span className="offer-pill prizes">🏆 Exciting Prizes</span>
         </div>
       </div>
 
@@ -69,7 +64,7 @@ const Home = () => {
         <Pricing />
       </section>
 
-      {/* PROBLEMS */}
+      {/* PROBLEM DOMAINS */}
       <section id="problems">
         <ProblemDomains />
       </section>
