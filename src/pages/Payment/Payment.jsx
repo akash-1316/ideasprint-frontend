@@ -68,7 +68,7 @@ const Payment = () => {
           <div className="qr-box">
             <img src={upiImage} alt="UPI QR" />
             <p className="upi-text">UPI ID</p>
-            <p className="upi-id">7569417341-2@axl</p>
+            <p className="upi-id">9177426430@axl</p>
           </div>
 
           <div className="payment-form">
