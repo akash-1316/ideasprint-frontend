@@ -31,8 +31,8 @@ export default function Pricing() {
 
           <div className="ticket-box active">
             <div>
-              <h4>Online Participation</h4>
-              <p>Remote Access · 2 Rounds</p>
+              <h4>Offline Participation</h4>
+              <p>Remote Access · 1 Rounds</p>
             </div>
             <span className="price">₹{PRICE_MAP[teamSize]}</span>
           </div>
