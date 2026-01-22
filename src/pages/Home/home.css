@@ -75,6 +75,27 @@
   line-height: 1.1;
   opacity: 0.9;
 }
+/* CLOSED MESSAGE */
+.registration-closed {
+  margin-top: 30px;
+  padding: 18px 26px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fee2e2;
+  background: linear-gradient(90deg, #7f1d1d, #991b1b);
+  box-shadow: 0 0 25px rgba(220, 38, 38, 0.45);
+  max-width: 90%;
+}
+
+/* DISABLED / CLOSED BUTTON */
+.closed-btn {
+  background: #1f2937 !important;
+  color: #9ca3af !important;
+  cursor: not-allowed !important;
+  opacity: 0.8;
+}
 
 /* ================= OFFER PILLS ================= */
 
