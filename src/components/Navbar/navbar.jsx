@@ -28,6 +28,7 @@ const Navbar = () => {
         .catch(() => setPaymentInfo(null));
     }
   }, []);
+
   const scrollTo = (id) => {
     setMenuOpen(false);
     const el = document.getElementById(id);
@@ -35,6 +36,7 @@ const Navbar = () => {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
@@ -46,7 +48,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
       <nav className="navbar">
         {/* LEFT */}
         <div className="nav-left" onClick={() => navigate("/")}>
@@ -54,7 +55,7 @@ const Navbar = () => {
           <span>IdeaSprint</span>
         </div>
 
-        {/* CENTER (DESKTOP) */}
+        {/* CENTER */}
         <div className="menu-pill">
           <span onClick={() => scrollTo("pricing")}>Pricing</span>
           <span onClick={() => scrollTo("problems")}>Problems</span>
@@ -62,39 +63,29 @@ const Navbar = () => {
           <span onClick={() => scrollTo("contact")}>Contact</span>
         </div>
 
-        {/* RIGHT (DESKTOP) */}
+        {/* RIGHT */}
         <div className="nav-actions">
           {!isLoggedIn ? (
             <>
               <button className="login-btn" onClick={() => navigate("/login")}>
                 Login
               </button>
-              <button
-                className="nav-btn"
-                onClick={() => navigate("/user-register")}
-              >
-                Register
+              <button className="nav-btn closed-btn" disabled>
+                Closed
               </button>
             </>
           ) : (
             <>
               {paymentInfo && (
                 <div className="payment-status-box">
-                  <span>
-                    <b>Leader:</b> {paymentInfo.leaderName || "—"}
-                  </span>
-                  <span>
-                    <b>Team:</b> {paymentInfo.teamSize}
-                  </span>
-                  <span>
-                    <b>Amount:</b> ₹{paymentInfo.amountPaid}
-                  </span>
+                  <span><b>Leader:</b> {paymentInfo.leaderName || "—"}</span>
+                  <span><b>Team:</b> {paymentInfo.teamSize}</span>
+                  <span><b>Amount:</b> ₹{paymentInfo.amountPaid}</span>
                   <span className={paymentInfo.paymentStatus}>
                     {paymentInfo.paymentStatus}
                   </span>
                 </div>
               )}
-
               <button className="login-btn" onClick={handleLogout}>
                 Logout
               </button>
@@ -110,42 +101,22 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="mobile-menu">
-          {/* LINKS */}
           <div className="mobile-links">
-             <span onClick={() => scrollTo("pricing")}>Pricing</span>
-          <span onClick={() => scrollTo("problems")}>Problems</span>
-          <span onClick={() => scrollTo("rewards")}>Rewards</span>
-          <span onClick={() => scrollTo("contact")}>Contact</span>
+            <span onClick={() => scrollTo("pricing")}>Pricing</span>
+            <span onClick={() => scrollTo("problems")}>Problems</span>
+            <span onClick={() => scrollTo("rewards")}>Rewards</span>
+            <span onClick={() => scrollTo("contact")}>Contact</span>
           </div>
 
-          {/* PAYMENT STATUS */}
-          {isLoggedIn && paymentInfo && (
-            <div className="mobile-payment-box">
-              <div>
-                <b>Leader:</b> {paymentInfo.leaderName || "—"}
-              </div>
-              <div>
-                <b>Team:</b> {paymentInfo.teamSize}
-              </div>
-              <div>
-                <b>Amount:</b> ₹{paymentInfo.amountPaid}
-              </div>
-              <div className={paymentInfo.paymentStatus}>
-                {paymentInfo.paymentStatus}
-              </div>
-            </div>
-          )}
-
-          {/* ACTION BUTTONS */}
           <div className="mobile-actions">
             {!isLoggedIn ? (
               <>
                 <button onClick={() => navigate("/login")}>Login</button>
-                <button onClick={() => navigate("/user-register")}>
-                  Register
+                <button className="closed-btn" disabled>
+                  Closed
                 </button>
               </>
             ) : (
