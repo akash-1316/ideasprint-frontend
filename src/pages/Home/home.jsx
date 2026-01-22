@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import Countdown from "../../components/Countdown/countdown";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/navbar";
 import Pricing from "../../components/Pricing/Pricing";
 import Rewards from "../../components/Rewards/Rewards";
@@ -9,26 +8,13 @@ import Footer from "../../components/Footer/footer";
 import ProblemDomains from "../../components/Problems/Problems";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const handleRegisterClick = () => {
-    const token = localStorage.getItem("token");
-
-    if (!token || token === "undefined") {
-      localStorage.setItem("redirectAfterLogin", "/event-register");
-      navigate("/login");
-    } else {
-      navigate("/event-register");
-    }
-  };
-
   return (
     <div>
       <Navbar />
 
       {/* HERO SECTION */}
       <div className="home">
-        {/* 🗓️ DATE PILL – GREEN */}
+        {/* DATE PILL */}
         <div className="date-pill offer-pill date-green">
           <span className="calendar-icon">🗓️</span>
           <div>
@@ -46,16 +32,14 @@ const Home = () => {
           <br /> Hackathon · 24 Jan
         </p>
 
+        {/* ⏳ COUNTDOWN – NOT REMOVED */}
         <Countdown />
 
-        <button className="cta" onClick={handleRegisterClick}>
-          Register for the Event →
-        </button>
-
-        {/* 🔥 INFO PILLS */}
-        <div className="offer-pills">
-          <span className="offer-pill open">🔥 Registration Open</span>
-          <span className="offer-pill prizes">🏆 Exciting Prizes</span>
+        {/* 🚫 REGISTRATIONS CLOSED MESSAGE */}
+        <div className="registration-closed">
+          🚫 Registrations for the event are closed.
+          <br />
+          We’ll get back to you soon!
         </div>
       </div>
 
